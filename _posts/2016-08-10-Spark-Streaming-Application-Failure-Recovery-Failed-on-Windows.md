@@ -1,3 +1,10 @@
+---
+layout: post
+categories: [Spark, Projects]
+tags: [Spark, Source Code]
+description: "Blog of Thought"
+---
+
 ### 1. What Happened?
 I made a Application using Spark Streaming. When I tested the Fault Tolerant Feature using ```WriteAheadLog``` mechanism of Spark on **Windows**(yeah, windows), I found out that the application could not recover from failure. What makes it strange is that, the application works well until I killed the driver manually, and the driver restarted and failed. I have read the source code, and the reason is as follows:
 
@@ -103,7 +110,7 @@ The Parameter ```Path file```, in this case is ```C:/tmp/hadoop```. In this func
 
 ```scala
   /**
-   * Whether the pathname is valid.  Currently prohibits relative paths, 
+   * Whether the pathname is valid.  Currently prohibits relative paths,
    * names which contain a ":" or "//", or other non-canonical paths.
    */
   public static boolean isValidName(String src) {
@@ -111,7 +118,7 @@ The Parameter ```Path file```, in this case is ```C:/tmp/hadoop```. In this func
     if (!src.startsWith(Path.SEPARATOR)) {
       return false;
     }
-      
+
     // Check for ".." "." ":" "/"
     String[] components = StringUtils.split(src, '/');
     for (int i = 0; i < components.length; i++) {
@@ -134,7 +141,7 @@ It's really complicated, I'll start at the ```WriteAheadLogBackedBlockRDD.comput
     // File: WriteAheadLogBackedBlockRDD.scala
 def compute(){
     ...
-    if (partition.isBlockIdValid) 
+    if (partition.isBlockIdValid)
     {
         getBlockFromBlockManager().getOrElse { getBlockFromWriteAheadLog() } // Here is the entry.
     }
@@ -166,7 +173,7 @@ def getBlockFromWriteAheadLog(): Iterator[T] = {
     dataRead = writeAheadLog.read(partition.walRecordHandle)
 ```
 
-It's really clear in the comment: To read block from ```WriteAheadLog```, it needs a non-existent directory, then the ```new File(System.getProperty("java.io.tmpdir"), UUID.randomUUID().toString())``` is called. the path is what have shown above: ```C:\tmp\...```. 
+It's really clear in the comment: To read block from ```WriteAheadLog```, it needs a non-existent directory, then the ```new File(System.getProperty("java.io.tmpdir"), UUID.randomUUID().toString())``` is called. the path is what have shown above: ```C:\tmp\...```.
 
 So, the process will be dead once it trys to read data from WriteAheadLog on Windows.
 
