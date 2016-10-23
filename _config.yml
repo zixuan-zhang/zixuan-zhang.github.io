@@ -1,5 +1,5 @@
 # Site settings
-title: Zixuan-Zhang
+title: 张梓轩
 header-img: "img/autumn2.jpg"
 tagline: "吉光片羽"  
 description: "Where Amazing"  
@@ -8,7 +8,7 @@ baseurl: ""
 
 # About/contact
 owner: 
-  name: "Zixuan-Zhang"
+  name: "张梓轩"
   email: zixuan.zhang.victor@gmail.com
   bio: "明朝即長路 惜取此時心"
 
