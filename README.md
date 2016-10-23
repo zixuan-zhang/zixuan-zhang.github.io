@@ -1,6 +1,6 @@
 # Microdust 微尘
 
-This is a blog created by Azeril. The blog is live at [azeril.me](http://azeril.me/).
+This is a blog created by viczzx. The blog is live at [noathinker.com](http://www.noathinker.com).
 
 ## Thanks
 
