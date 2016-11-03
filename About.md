@@ -15,11 +15,13 @@ header-img: "img/plane.jpg"
 * 羽毛球，美剧。Friends，冰火
 
 ## Resume
+
 ### Education
 School of Software, Dalian University of Technology, LiaoNing, China.(2010-2014)
 Institute of Software, University of Chinese Academy of Sciences, Beijing, China(2014-Present)
 
 ### Work Experience
+
 #### Baina Info (2013.12 – 2014.8)
 * Software Engineering Intern
 * DolphinNews Team
