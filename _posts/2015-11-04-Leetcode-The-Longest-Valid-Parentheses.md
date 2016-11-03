@@ -101,71 +101,73 @@ func longestValidParentheses(string s):
 
 ### 完整代码
 
-```java
-#include <iostream>
-#include <string>
-#include <stack>
+```C++
 
-using namespace std;
+    #include <iostream>
+    #include <string>
+    #include <stack>
 
-class Solution
-{
-public:
-    int longestValidParentheses1(string s)
+    using namespace std;
+
+    class Solution
     {
-        int len = s.length();
-        if (len < 2)
-            return 0;
-        int* left = new int[len+1];
-        int* max = new int[len+1];
-        left[0] = 0;
-        max[0] = 0;
-        stack<int> stk;
-        for (int i = 0; i < len; ++i)
+    public:
+        int longestValidParentheses1(string s)
         {
-            if (s[i] == '(')
+            int len = s.length();
+            if (len < 2)
+                return 0;
+            int* left = new int[len+1];
+            int* max = new int[len+1];
+            left[0] = 0;
+            max[0] = 0;
+            stack<int> stk;
+            for (int i = 0; i < len; ++i)
             {
-                left[i+1] = left[i] + 1;
-                stk.push(max[i]);
-                max[i+1] = 0;
-            }
-            else
-            {
-                if (left[i] > 0)
+                if (s[i] == '(')
                 {
-                    left[i+1] = left[i] - 1;
-                    max[i+1] = max[i] + 1 + stk.top();
-                    stk.pop();
+                    left[i+1] = left[i] + 1;
+                    stk.push(max[i]);
+                    max[i+1] = 0;
                 }
                 else
                 {
-                    left[i+1] = 0;
-                    max[i+1] = 0;
-                    while (!stk.empty())
+                    if (left[i] > 0)
+                    {
+                        left[i+1] = left[i] - 1;
+                        max[i+1] = max[i] + 1 + stk.top();
                         stk.pop();
+                    }
+                    else
+                    {
+                        left[i+1] = 0;
+                        max[i+1] = 0;
+                        while (!stk.empty())
+                            stk.pop();
+                    }
+
                 }
-
             }
+
+            int result = max[0];
+            for (int i = 1; i < len + 1; ++i)
+                if (result < max[i])
+                    result = max[i];
+            return result * 2;
         }
+    };
 
-        int result = max[0];
-        for (int i = 1; i < len + 1; ++i)
-            if (result < max[i])
-                result = max[i];
-        return result * 2;
+    int main()
+    {
+        Solution s;
+        //string str = ")())()(()()))";
+        //string str = ")()(()))()";
+        //string str = "))(()((";
+        //string str = "()(()";
+        string str = ")()(()(())(())()";
+        int result = s.longestValidParentheses1(str);
+        cout<<result<<endl;
+        return 0;
     }
-};
 
-int main()
-{
-    Solution s;
-    //string str = ")())()(()()))";
-    //string str = ")()(()))()";
-    //string str = "))(()((";
-    //string str = "()(()";
-    string str = ")()(()(())(())()";
-    int result = s.longestValidParentheses1(str);
-    cout<<result<<endl;
-    return 0;
-}
 ```
