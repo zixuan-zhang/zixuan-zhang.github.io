@@ -101,7 +101,7 @@ func longestValidParentheses(string s):
 
 ### 完整代码
 
-```C++
+```java
 #include <iostream>
 #include <string>
 #include <stack>
