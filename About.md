@@ -9,7 +9,33 @@ header-img: "img/plane.jpg"
     <p><img src="http://dreamofbook.qiniudn.com/Zero.png" align="center"></p>
 </center>
 
-喜欢折腾的伪技术宅。一点点 geek，一丢丢的执著，就像吃烧烤时多少会撒一点孜然，恰到好处就够。日常之中，多的是折腾劲，也希望能添几分专注、几许勇敢。这就是我。
+## Introduction
 
+* 中科院软件在读硕士
+* 羽毛球，美剧。Friends，冰火
+
+## Resume
+### Education
+School of Software, Dalian University of Technology, LiaoNing, China.(2010-2014)
+Institute of Software, University of Chinese Academy of Sciences, Beijing, China(2014-Present)
+
+### Work Experience
+#### Baina Info (2013.12 – 2014.8)
+* Software Engineering Intern
+* DolphinNews Team
+* **Projects:** Distributed Image Storage System, Label System
+
+#### Baidu (2014.12 – 2015.8)
+* Software Engineering Intern
+* Baidu Map Navigation Team
+* **Projects:** Transportation Mode Classifier Based on GPS Data;  Routing Algorithm Performance Optimization
+
+### Skill
+Linux, Python, C/C++
+
+For full version, please visit [LinkedIn](http://www.linkedin.com/in/zhangzixuan1991)
+## Contact
+* [Email](zixuan.zhang.victor@gmail.com)
+* [Github](https://github.com/zixuan-zhang)
 
 > Live long and prosper
