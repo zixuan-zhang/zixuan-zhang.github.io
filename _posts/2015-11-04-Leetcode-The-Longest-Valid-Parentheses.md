@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode: The Longest Valid Parentheses
+title: LeetCode The Longest Valid Parentheses
 categories: [LeetCode,算法]
 tags: [LeetCode,算法]
 description: "Blog of Thought"
