@@ -75,7 +75,7 @@ index = 7 | left[7] = left[6] – 1 = 1 | F[7] = F[6] + 1 + stack.top() = 2 | st
 5. 递推公式有些复杂，直接上伪代码。
 
 ### 伪代码
-```C
+```
 func longestValidParentheses(string s):
     length = len(s) //字符串长度
     left[length+1] //存储剩余左括号的数量
@@ -100,7 +100,7 @@ func longestValidParentheses(string s):
 ```
 
 ### 完整代码
-```C
+```
 #include <iostream>
 #include <string>
 #include <stack>
