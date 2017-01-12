@@ -13,13 +13,20 @@ header-img: "img/plane.jpg"
 * 魔戒
 
 ## 想读
-* Google Java编程规范
 * Java编程思想
 * Java性能优化权威指南
 * 深入理解Java虚拟机
 * 七国王的骑士——冰与火之歌外传
 
 ## 读过
+* Google Java编程规范
+  * 2017.01.12-2017.01.12
+  * 内容很少，大部分都知道。块缩进两个空格有点别扭，还是习惯四个空格
+  * 每个`switch`语句都必须有个`default`
+  * 包名全部小写，连续的单词只是简单的连起来，不需要下划线
+  * 类名以`UpperCase`风格；方法名以`lowerCase`风格，且是动词；常量以`CONSTANT_CASE`风格；普通字段名以`lowerCase`风格
+  * 标准的javadoc标记按照以下顺序出现：`@param`, `@return`, `@throws`, `@deprecated`，当无法在一行中描述时，连续行要缩进4个空格
+  * 需要在public类的public或protected方法上使用javadoc
 * 明朝那些事
 * 三体
 * 霍比特人
