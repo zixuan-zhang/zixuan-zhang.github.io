@@ -7,11 +7,12 @@ header-img: "img/plane.jpg"
 
 ## 在读
 
-#### Java编程思想
-* 2017.01.14-2017.2.12(Expected)
-
 #### 深入理解计算机系统(Second Time)
 * 2016.10.01-2017.2.12(Expected)
+
+### Effective Java
+* 2016.10.01-2017.2.12(Expected)
+* 这本书看了一点。由于自己目前（2017.01.19）目前还属于Java的入门阶段，没有太多的Java编程经验，对于书中内容不能深有体会的理解。打算看些Java代码。
 
 #### Linux内核情景分析(Pending)
 
@@ -25,6 +26,8 @@ header-img: "img/plane.jpg"
 ## 想读
 * Java性能优化权威指南
 * 深入理解Java虚拟机
+* Java编程思想(Pending)
+
 
 ---
 ---
